@@ -13,6 +13,10 @@ export const linux = "https://img.shields.io/badge/Linux-FCC624?style=for-the-ba
 export const tailwindCss = "https://img.shields.io/badge/-Tailwind%20css-06B6D4?logo=tailwindcss&logoColor=white&style=for-the-badge";
 export const sdl = "https://img.shields.io/badge/SDL-FF6600?style=for-the-badge&logo=sdl&logoColor=white"
 
-export const badges = [
-    cpp, python, linux, csharp, unity, java, html, css, js, react, nodeJs, tailwindCss, sdl
+export const main_badges = [
+    cpp, python, linux, csharp, unity, sdl
+]
+
+export const other_badges = [
+    java, html, css, js, react, nodeJs, tailwindCss
 ]

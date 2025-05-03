@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { badges } from "../../content/badges";
+import { main_badges, other_badges } from "../../content/badges";
 
 const Über = ({ isMaximized }) => {
   const [seeMore, setSeeMore] = useState(false);
@@ -43,7 +43,14 @@ const Über = ({ isMaximized }) => {
       </div>
 
       <div className="flex flex-wrap gap-1 justify-center sm:justify-start">
-        {badges.map((url, i) => {
+        <h4>Hauptfähigkeiten:</h4>
+        {main_badges.map((url, i) => {
+          return <img src={url} alt="badge" key={i} />;
+        })}
+      </div>
+      <div className="flex flex-wrap gap-1 justify-center sm:justify-start">
+        <h4>bekomme ich auch hin:</h4>
+        {other_badges.map((url, i) => {
           return <img src={url} alt="badge" key={i} />;
         })}
       </div>

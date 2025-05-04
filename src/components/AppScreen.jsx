@@ -5,6 +5,10 @@ import AppContext from "../context/AppContext";
 import Über from "./Apps/Über";
 import Mail from "./Apps/Mail";
 import Projekte from "./Apps/Projekte";
+import Pong from "./Apps/Pong";
+import Snake from "./Apps/Snake";
+import Minesweeper from "./Apps/Minesweeper";
+
 
 const AppScreen = () => {
   const { state } = useContext(AppContext);
@@ -42,6 +46,40 @@ const AppScreen = () => {
           isMinimized={state.Mail.minimize}
         >
           <Mail isMaximized={state.Mail.fullscreen} />
+        </AppScreenFrame>
+      )}
+      {state.Pong?.open && (
+        <AppScreenFrame
+          appInfo={Menu[3]} // Pong is the 4th item in Menu array
+          className=""
+          isActive={state.Pong.top}
+          isMaximized={state.Pong.fullscreen}
+          isMinimized={state.Pong.minimize}
+        >
+          <Pong isMaximized={state.Pong.fullscreen} />
+        </AppScreenFrame>
+      )}
+      {state.Snake?.open && (
+        <AppScreenFrame
+          appInfo={Menu[4]}
+          className=""
+          isActive={state.Snake.top}
+          isMaximized={state.Snake.fullscreen}
+          isMinimized={state.Snake.minimize}
+        >
+          <Snake isMaximized={state.Snake.fullscreen} />
+        </AppScreenFrame>
+      )}
+
+      {state.Minesweeper?.open && (
+        <AppScreenFrame
+          appInfo={Menu[5]}
+          className=""
+          isActive={state.Minesweeper.top}
+          isMaximized={state.Minesweeper.fullscreen}
+          isMinimized={state.Minesweeper.minimize}
+        >
+          <Minesweeper isMaximized={state.Minesweeper.fullscreen} />
         </AppScreenFrame>
       )}
     </>

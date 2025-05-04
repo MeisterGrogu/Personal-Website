@@ -44,6 +44,42 @@ const Taskbar = () => {
         minimizeApp={() => minimizeApp(Menu[2].name)}
       />
     );
+    state.Pong?.open &&
+    taskbarAppStack.push(
+      <TaskbarAppBtn
+        key={taskbarAppStack.length}
+        appName={Menu[3].name}
+        iconSrc={Menu[3].path}
+        isActive={state.Pong.top && !state.Pong.minimize}
+        activeHandler={() => activeApp(Menu[3].name)}
+        minimizeApp={() => minimizeApp(Menu[3].name)}
+      />
+    );
+    state.Snake?.open &&
+      taskbarAppStack.push(
+        <TaskbarAppBtn
+          key={taskbarAppStack.length}
+          appName={Menu[4].name}
+          iconSrc={Menu[4].path}
+          isActive={state.Snake.top && !state.Snake.minimize}
+          activeHandler={() => activeApp(Menu[4].name)}
+          minimizeApp={() => minimizeApp(Menu[4].name)}
+        />
+      );
+
+    state.Minesweeper?.open &&
+      taskbarAppStack.push(
+        <TaskbarAppBtn
+          key={taskbarAppStack.length}
+          appName={Menu[5].name}
+          iconSrc={Menu[5].path}
+          isActive={state.Minesweeper.top && !state.Minesweeper.minimize}
+          activeHandler={() => activeApp(Menu[5].name)}
+          minimizeApp={() => minimizeApp(Menu[5].name)}
+        />
+      );
+
+  
   return (
     <>
       {isStartClicked && <StartMenu setCloseStartMenu={setIsStartClicked} />}

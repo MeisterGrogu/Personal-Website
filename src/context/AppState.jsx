@@ -31,6 +31,24 @@ const initialState = {
     top: false,
     fullscreen: false,
   },
+  Pong: {
+    open: false,
+    top: false,
+    fullscreen: false,
+    minimize: false
+  },
+  Snake: {
+    open: false,
+    top: false,
+    fullscreen: false,
+    minimize: false,
+  },
+  Minesweeper: {
+    open: false,
+    top: false,
+    fullscreen: false,
+    minimize: false,
+  },  
   previouslyActiveApp: "",
   taskbarAppStack: [],
 };

@@ -13,7 +13,7 @@ const Mail = ({ isMaximized }) => {
 
     if (
       !input.email.value.includes("@") ||
-      !input.email.value.includes(".com")
+      !input.email.value.includes(".")
     ) {
       setNotification(
         <>
@@ -73,7 +73,7 @@ const Mail = ({ isMaximized }) => {
 
         <div className=" bg-white border-b-[2px] border-b-[#4d4c4c] m-[2px] p-[10px] flex justify-start gap-[5px] text-[18px] items-center">
           <label htmlFor="receiver" className=" text-[#9b9b9b]">
-            Zu:
+            An:
           </label>
           <input
             id="receiver"
